@@ -1,4 +1,5 @@
 import pandas as pd
+from imblearn.pipeline import make_pipeline as imb_make
 from IPython.display import display
 from sklearn.model_selection import (
     GridSearchCV,
@@ -6,7 +7,6 @@ from sklearn.model_selection import (
     cross_validate,
     train_test_split,
 )
-from sklearn.pipeline import make_pipeline
 
 
 class FitPredictGo:
@@ -52,13 +52,12 @@ class FitPredictGo:
         self.fit_type = search_type
         if search_type == "Grid":
             search = GridSearchCV(
-                self.pipe, param_grid, n_jobs=-1, cv=cv_folds, scoring=self.scoring
+                self.pipe, param_grid, cv=cv_folds, scoring=self.scoring
             )
         else:
             search = RandomizedSearchCV(
                 self.pipe,
                 param_grid,
-                n_jobs=1,
                 cv=cv_folds,
                 scoring=self.scoring,
                 random_state=self.random_state,
@@ -77,7 +76,7 @@ class FitPredictGo:
 
     def set_pipeline(self, preprocessors, model):
         estimators = preprocessors + [model]
-        self.pipe = make_pipeline(*estimators)
+        self.pipe = imb_make(*estimators)
         display(self.pipe)
 
     def get_results(self, results):

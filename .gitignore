@@ -4,3 +4,4 @@ __pycache__/
 .vscode/
 task/
 archive/
+notebooks/experiments/catboost_info
