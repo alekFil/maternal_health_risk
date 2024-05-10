@@ -14,11 +14,11 @@ def show_results(probabilities):
     prediction = np.argmax(probabilities)
     st.write(f"## {labels[prediction]}")
     if prediction == 0:
-        st.success("Низкий риск")
-    elif prediction == 1:
-        st.warning("Средний риск")
-    else:
         st.error("Высокий риск")
+    elif prediction == 1:
+        st.success("Низкий риск")
+    else:
+        st.warning("Средний риск")
 
     # Визуализация вероятностей отнесения к классам
     fig, ax = plt.subplots()
