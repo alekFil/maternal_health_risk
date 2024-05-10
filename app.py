@@ -10,7 +10,7 @@ st.write("Добро пожаловать!")
 
 # Отображение результатов
 def show_results(probabilities):
-    labels = ["Низкий риск", "Средний риск", "Высокий риск"]
+    labels = ["Высокий риск", "Низкий риск", "Средний риск"]
     prediction = np.argmax(probabilities)
     st.write(f"## {labels[prediction]}")
     if prediction == 0:
