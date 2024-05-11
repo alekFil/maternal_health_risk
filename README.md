@@ -1,6 +1,6 @@
 # Разработка модели машинного обучения для прогнозирования рисков для здоровья беременных
 
-* **Обобщенный блокнот-отчет с анализом финальной модели на тесте:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1sbwWMW5TyoQ--OFIyhbZm09gSDiNiqkC?usp=sharing)
+* **Обобщенный блокнот-отчет с анализом финальной модели на тесте:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alekFil/maternal_health_risk/blob/main/notebooks/maternal-health-risk.ipynb)
 
 * **Демонстрация приложения**: [Maternal Health Risk App](https://maternal-health-risk.streamlit.app/)
  <img src="images\maternal-health-risk.streamlit.app.gif" alt="covers">
