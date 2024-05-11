@@ -8,7 +8,8 @@ from src.feature_preprocessing import feature_preprocessing
 def main(
     command_args=None,
     features=None,
-    model_path="models/baseline_model.joblib",
+    # model_path="models/baseline_model.joblib",
+    model_path="models/production_model.joblib",
 ):
     # Если аргументы переданы из командной строки, парсим их
     print(command_args)

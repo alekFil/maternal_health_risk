@@ -75,8 +75,11 @@ class FitPredictGo:
         return self.fitted[predict_type].predict_proba(X_test)[:, 1]
 
     def set_pipeline(self, preprocessors, model):
-        estimators = preprocessors + [model]
-        self.pipe = imb_make(*estimators)
+        if preprocessors is not None:
+            estimators = preprocessors + [model]
+            self.pipe = imb_make(*estimators)
+        else:
+            self.pipe = model
         display(self.pipe)
 
     def get_results(self, results):
